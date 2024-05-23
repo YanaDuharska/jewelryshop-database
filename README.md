@@ -1,0 +1,2 @@
+# jewelryshop-database
+
