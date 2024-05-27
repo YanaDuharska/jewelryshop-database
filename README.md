@@ -1,4 +1,5 @@
 # jewelryshop-database
 
-![database diagram](./Desktop/erdiagram.png)
+Example database
 
+![database diagram](./Applications/XAMPP/htdocs/jewelryshop/erdiagram.png)
