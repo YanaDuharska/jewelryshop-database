@@ -1,10 +1,8 @@
--- Create Database
+
 CREATE DATABASE JewelryShop;
 
--- Use the database
 USE JewelryShop;
 
--- Customers table
 CREATE TABLE Customers (
     CustomerID INT PRIMARY KEY IDENTITY(1,1),
     Name VARCHAR(50) NOT NULL,
@@ -12,7 +10,6 @@ CREATE TABLE Customers (
     CreatedAt DATETIME DEFAULT GETDATE()
 );
 
--- LoyaltyCards table
 CREATE TABLE LoyaltyCards (
     LoyaltyCardID INT PRIMARY KEY IDENTITY(1,1),
     CustomerID INT UNIQUE,
@@ -22,7 +19,6 @@ CREATE TABLE LoyaltyCards (
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
 );
 
--- Products table
 CREATE TABLE Products (
     ProductID INT PRIMARY KEY IDENTITY(1,1),
     Name VARCHAR(100) NOT NULL,
@@ -32,7 +28,6 @@ CREATE TABLE Products (
     CreatedAt DATETIME DEFAULT GETDATE()
 );
 
--- Orders table
 CREATE TABLE Orders (
     OrderID INT PRIMARY KEY IDENTITY(1,1),
     CustomerID INT,
@@ -41,7 +36,6 @@ CREATE TABLE Orders (
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
 );
 
--- OrderDetails table
 CREATE TABLE OrderDetails (
     OrderDetailID INT PRIMARY KEY IDENTITY(1,1),
     OrderID INT,
@@ -67,7 +61,6 @@ CREATE TABLE ProductCategories (
 
 
 
--- Insert initial data
 INSERT INTO Customers (Name, Email) VALUES 
 ('Yana', 'yana@email.com'),
 ('Mia', 'mia@email.com'),
