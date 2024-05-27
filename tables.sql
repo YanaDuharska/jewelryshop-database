@@ -1,4 +1,4 @@
-CREATE database JewelryShop;
+CREATE DATABASE JewelryShop;
 
 USE JewelryShop;
 
