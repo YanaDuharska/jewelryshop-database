@@ -53,8 +53,8 @@ CREATE TABLE OrderDetails (
 
 CREATE TABLE Categories (
     CategoryID INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100),
-    FOREIGN KEY (name) REFERENCES Products(Category)
+    Name VARCHAR(100),
+    FOREIGN KEY (Name) REFERENCES Products(Category)
 );
 
 CREATE TABLE ProductCategories (
@@ -96,7 +96,7 @@ INSERT INTO OrderDetails (OrderID, ProductID, Quantity) VALUES
 (3, 3, 1),
 (3, 1, 1);
 
-INSERT INTO Categories (name) VALUES
+INSERT INTO Categories (Name) VALUES
 ('Ring'),
 ('Bracelet'),
 ('Earring');
