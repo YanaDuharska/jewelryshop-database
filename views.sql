@@ -1,4 +1,3 @@
--- View for total sales per product
 CREATE VIEW vw_total_sales_per_product AS
 SELECT
     p.ProductID,
@@ -12,7 +11,6 @@ JOIN
 GROUP BY
     p.ProductID, p.Name;
 
--- View for orders by customer
 CREATE VIEW vw_orders_by_customer AS
 SELECT
     c.CustomerID,
@@ -25,7 +23,6 @@ FROM
 JOIN
     Orders o ON c.CustomerID = o.CustomerID;
 
--- View for product stock levels
 CREATE VIEW vw_product_stock_levels AS
 SELECT
     p.ProductID,
