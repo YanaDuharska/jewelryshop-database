@@ -11,7 +11,7 @@ DECLARE @NewOrderID INT = SCOPE_IDENTITY();
 INSERT INTO OrderDetails (OrderID, ProductID, Quantity) VALUES (@NewOrderID, @NewProductID, 1);
 
 COMMIT TRANSACTION;
-- Simple index
+
 CREATE INDEX idx_product_name ON Products(Name);
 
 CREATE INDEX idx_orderdetails_orderid_productid ON OrderDetails(OrderID, ProductID);
